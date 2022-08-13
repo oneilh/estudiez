@@ -17,7 +17,7 @@
 
     <!-- ========css======== -->
     <link rel="stylesheet" href="./new.css">
-
+    <link rel="stylesheet" href="./css/style.css">
 
      <!-- google fonts montserrat -->
      <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -132,7 +132,7 @@
           <div class="resources-info">
             <div class="closebtn1"><img src="./images/close(1).png" alt=""></div>
             <div class="e-book">
-              <h2 class="">Ebook</h2>
+              <h2 class="">Ebooks</h2>
               <table>
                 <tr>
                   <td>
@@ -309,6 +309,32 @@
 
        
     </div>
+<<<<<<< HEAD
     <script src="./new.js"></script>
+=======
+    <script src="./js/ui.js"></script>
+
+    <!-- Firebase cdn, config and initialisation -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script>
+      //Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyCH-0jemPytvwPxatjc1-ZekLMQSi3QuF4',
+        authDomain: 'estudiez-f87eb.firebaseapp.com',
+        projectId: 'estudiez-f87eb',
+        storageBucket: 'estudiez-f87eb.appspot.com',
+        messagingSenderId: '237693345273',
+        appId: '1:237693345273:web:e37ab9ce2f5330d79d7128',
+      }
+      firebase.initializeApp(config)
+      const db = firebase.firestore()
+      // const auth = firebase.auth();
+    </script>
+
+    <script src="./js/users.js"></script>
+    <script src="./js/index.js"></script>
+>>>>>>> 1489b62ca26d6b27a33cde7f2984dc99d517eb35
 </body>
 </html>
