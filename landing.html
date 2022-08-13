@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+rel="stylesheet"integrity
+="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+<!-- Javascript bootstrap link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+crossorigin="anonymous"></script>
+
+
+    <!-- =====font awesome===== -->
+    <script src="https://kit.fontawesome.com/a2c8a30440.js" crossorigin="anonymous"></script>
+    <!-- ========css======== -->
+    
+     <!-- google fonts montserrat -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+       rel="stylesheet"
+     />
+     <!-- end google font monserrat -->
+
+
+</head>
+<body>
+
+<style>
+    *{
+  padding: 0;
+  margin: 0;
+  font-family:'Montserrat';  
+}
+
+.wallpaper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://wallpaperaccess.com/full/1771974.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+     overflow: hidden;
+     color: black;
+}
+
+.sign{
+
+    width: 100px;
+    height: 40px;
+    color: black;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 5px; 
+    margin-top: -5px;
+    margin-left: 100px;
+}
+
+
+.sign2{
+
+width: 100px;
+height: 40px;
+color:black;
+border-radius: 20px;
+border:solid  2px black;
+/* margin-top: px; */
+position: absolute;
+bottom: 305px;
+left: 210px;
+}
+
+
+.both1{
+    display: flex;
+    margin-left: 110px;
+    gap: 5px;
+    text-align: center;
+    
+}
+
+.sign:hover{
+    background-color: royalblue;
+    
+}
+
+
+.sign2:hover:hover{
+    background-color: royalblue;
+    
+}
+
+.welcome{
+    margin-top: 160px;
+    margin-left: 100px;
+    font-family: 'Montserrat';
+}
+
+
+.modal-title{
+  color: white;
+}
+
+.modal-header{
+  background-color: royalblue;
+
+}
+
+.modal-body{
+  color: black;
+}
+.modal-footer{
+  background-color:white;
+}
+
+.sub{
+  width: 100px;
+  height: 30px;
+  background-color: green;
+  color: black;
+  text-align: center;
+}
+
+</style>
+<div class="wallpaper">
+  <img src="/logo-removebg-preview (1).png" width="200px" class="p-1">
+  
+  
+
+  <div class="welcome">
+      <h1 style="font-size:60px ;">Welcome to eStudiez</h1>
+      <p>A journey to excellence</p>
+
+     
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <button type="button" class="btn  sign" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Sign up</button>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">CREATE AN ACCOUNT </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" >
+          <form style="overflow-y: auto !important; max-height: 5 0vh !important;">
+
+
+            <div>
+                <label class="form-label">Firstname</label>               
+                <input type="text" class="form-control">
+
+            </div>
+
+            <div >
+             <label class="form-label">Lastname</label>
+             <input type="text" class="form-control">
+         </div>
+
+         <div>
+           <label class="form-label">Username</label>
+           <input type="text" class="form-control">
+       </div>
+
+       <div >
+        <label class="form-label">Lastname</label>
+        <input type="text" class="form-control">
+    </div>
+
+    <div>
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control">
+    </div>
+
+    
+    <div>
+      <label class="form-label">Username</label>
+      <input type="text" class="form-control">
+    </div>
+
+
+       
+       
+       
+       
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- modal for log in  -->
+
+
+
+
+
+
+<button type="button" class="btn sign2" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Log in</button>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel2"> LOGIN IN YOUR ACCOUNT </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" >
+        <form style="overflow-y: auto !important; max-height: 5 0vh !important;">
+
+
+              
+            <div>
+              <label class="form-label">Username</label>
+              <input type="text" class="form-control">
+          </div>
+     
+     
+          
+          <div>
+           <label class="form-label">Password</label>
+           <input type="password" class="form-control"><br>
+       </div>
+     
+       <input type="submit" class="sub">
+    
+      </form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+  
+    
+</body>
+</html>
+
+
+

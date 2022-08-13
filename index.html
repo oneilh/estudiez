@@ -15,7 +15,7 @@
     <!-- =====font awesome===== -->
     <script src="https://kit.fontawesome.com/a2c8a30440.js" crossorigin="anonymous"></script>
     <!-- ========css======== -->
-    <link rel="stylesheet" href="/new.css">
+    <link rel="stylesheet" href="./css/style.css">
      <!-- google fonts montserrat -->
      <link rel="preconnect" href="https://fonts.googleapis.com" />
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,7 +90,7 @@
 
           <!-- ==========result info============ -->
             <div class="result-info" tabindex="1">
-              <div class="closebtn"><img src="/images/close(1).png" alt=""></div>
+              <div class="closebtn"><img src="./images/close(1).png" alt=""></div>
               <h3>Result: </h3>
               <table class="table">
                   <thead class="thead-dark">
@@ -242,6 +242,28 @@
       </div>
        
     </div>
-    <script src="/new.js"></script>
+    <script src="./js/ui.js"></script>
+
+    <!-- Firebase cdn, config and initialisation -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script>
+      //Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyCH-0jemPytvwPxatjc1-ZekLMQSi3QuF4',
+        authDomain: 'estudiez-f87eb.firebaseapp.com',
+        projectId: 'estudiez-f87eb',
+        storageBucket: 'estudiez-f87eb.appspot.com',
+        messagingSenderId: '237693345273',
+        appId: '1:237693345273:web:e37ab9ce2f5330d79d7128',
+      }
+      firebase.initializeApp(config)
+      const db = firebase.firestore()
+      // const auth = firebase.auth();
+    </script>
+
+    <script src="./js/users.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
