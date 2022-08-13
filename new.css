@@ -98,7 +98,10 @@ img{
 
 
 
-
+/* ====================================Student===================================== */
+#student{
+   
+}
 /* ============categories======== */
 .categories{
     
@@ -232,8 +235,7 @@ img{
 
 
 /* ==========javascript ========= */
-/* =========grid change on open======= */
-/* =====result===== */
+/* =================result============= */
 
 .result-info{
     display:none;
@@ -244,16 +246,6 @@ img{
 .info h3{
     margin-bottom: 1.2rem;
 }
-
-/* =======close button====== */
-.closebtn{
-    font-size: 0.1rem;
-    position: relative;
-    color: var(--color1);
-    width: 2rem;
-    left: 95%;
-}
-
 
 /* =======resources========= */
 .resources-info{
@@ -279,26 +271,63 @@ img{
     margin: 4rem;
 }
 
-
 /* ============revison/extra classes========= */
-
-
-
-
+.notification-table{
+    display: none;
+    margin: 2rem;
+}
+.notification-table, .notification-table th, .notification-table td{
+    border-bottom: 2px solid;   
+    border-collapse: collapse;
+    width: 80%;
+    margin: 0 auto;
+    height: fit-content;
+    text-align: left;
+    padding: 1rem;
+}
+.notification table{
+    border: 2px solid;
+}
+.notification th{
+    font-size: 1.5rem;
+}
+.notification td{
+    height: 0.2rem;
+}
+img{
+    width: 3rem;
+}
+.notification li img{
+    display: inline-block;
+    width: 1.2rem;
+}
 
 
 
 /* ===========acad=========== */
-.subject_maths{
-    display: none;
-}
-.subject_bio{
-    display: none;
-}
-.subject_chemo{
-    display: none;
-}
 
+/* ================close button============== */
+.closebtn{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
+.closebtn1{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
+.closebtn2{
+    font-size: 0.1rem;
+    position: relative;
+    color: var(--color1);
+    width: 2rem;
+    left: 95%;
+}
 
 
 /* ==========focus========== */
@@ -306,7 +335,16 @@ img{
         border: 3px solid black;
     }
 
-/* ===========Parent=========== */
+
+
+
+
+
+/* ============================Parent============================ */
+
+
+
+
 
 
 
