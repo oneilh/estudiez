@@ -1,5 +1,5 @@
+// ============student===============
 let additional = document.querySelector('.additional');
-let focus = document.querySelector('.focus-border');
 
 // =================Result===============
 let result = document.querySelector('.result-info');
@@ -51,3 +51,29 @@ closeBtn2.addEventListener('click', () => {
     note_table.style.display = 'none'
     resource.style.display = 'none';
 });
+
+
+
+
+
+
+// =========================teacher=================
+let teachDis = document.querySelector('.teachDisplay');
+
+// ===============result===================
+let teacherScores = document.querySelector('.teachUpdate');
+let Admin = document.querySelector('.admin-update');
+let teachBtn = document.querySelector('.teachBtn');
+teacherScores.addEventListener('click', () => {
+    teacherScores.style.display = 'block';
+    Admin.style.display = 'none';
+    // result.style.display = 'none';
+    // resource.style.display = 'none';
+});
+closeBtn2.addEventListener('click', () => {
+    Admin.style.display = 'block';
+    teacherScores.style.display = 'none'
+    // resource.style.display = 'none';
+});
+
+
