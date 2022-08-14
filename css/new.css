@@ -299,10 +299,17 @@ img{
     display: inline-block;
     width: 1.2rem;
 }
+/* ==============student acad============== */
+.student-acad{
+    display: none;
+}
+.student-acad table{
+    width: 70%;
+    margin: 0 auto;
+}
 
 
 
-/* ===========acad=========== */
 
 /* ================close button============== */
 .closebtn{
@@ -354,7 +361,7 @@ grid to none applies to vice versa============*/
 
 
 
-/* ==============teacher============= */
+/* =================================teacher========================== */
 .admin-update{
     display: none;
 }
@@ -389,12 +396,45 @@ grid to none applies to vice versa============*/
 }
 
 
+/* =========resources========= */
+.teach-resource{
+    display: none;
+}
+.teach-resource table{
+    height: 0.2rem;
+}
+.teach-resource [type = submit]{
+    background-color: black;
+    color: white;
+    margin-top: -10rem;
+    height: 3rem;
+    width: 8rem;
+    font-weight: bold;
+}
+
+.teach-resource teach-vid-upd{
+    margin-top: -30px;
+}
+
+/* ===============acad progress=========== */
+.totalResult{
+    display: none;
+}
+.totalResult table{
+    margin: 0 auto;
+    width: 70%;
+}
 
 
 
-
-/* ===========Media queries============== */
+/* ================Media queries============== */
 @media (max-width: 600px){
+/* ==========studenge page=========== */
+.stud-mobile{
+    display: none;
+}
+
+
         .general-home{
             display: flex;
             flex-direction: column;
