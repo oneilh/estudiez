@@ -15,6 +15,9 @@
     <!-- =====font awesome===== -->
     <script src="https://kit.fontawesome.com/a2c8a30440.js" crossorigin="anonymous"></script>
 
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/logo-sm1.png" type="image/x-icon" />
+
     <!-- ========css======== -->
     <link rel="stylesheet" href="./css/new.css">
     <!-- <link rel="stylesheet" href="./css/style.css"> -->
@@ -59,7 +62,7 @@
           <div class="contact icon"><a href="./feedback.html"><i class="fa-solid fa-comment-dots"></i></a></div>
             <div class="contact icon"><a href="./Contact.html"><i class="fa-solid fa-envelope"></i></a></div>
             <div class="dashBoard icon"><i class="fa-solid fa-house"></i></div>
-            <div class="logout icon"><a href="#"><i class="fa-solid fa-right-from-bracket"></i></a></div>
+            <div class="logout icon" id="logout"><a href="#" id="logout" type="button"><i class="fa-solid fa-right-from-bracket"></i></a></div>
         </div>
 
 
@@ -740,10 +743,12 @@
       }
       firebase.initializeApp(config)
       const db = firebase.firestore()
-      // const auth = firebase.auth();
+      const auth = firebase.auth();
+      
     </script>
 
     <script src="./js/users.js"></script>
+    <!-- <script src="./js/auth.js"></script> -->
     <script src="./js/index.js"></script>
 </body>
 </html>
