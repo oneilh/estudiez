@@ -1,40 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-     <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-rel="stylesheet"integrity
-="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
 
-<!-- Javascript bootstrap link -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
-crossorigin="anonymous"></script>
-
+    <!-- Javascript bootstrap link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- =====font awesome===== -->
-    <script src="https://kit.fontawesome.com/a2c8a30440.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a2c8a30440.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- ========css======== -->
-    
-     <!-- google fonts montserrat -->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-     <link
-       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
-       rel="stylesheet"
-     />
-     <!-- end google font monserrat -->
 
-
-</head>
-<body>
-
-<style>
+    <!-- google fonts montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end google font monserrat -->
+  </head>
+  <body class="h-100">
+    <!-- <style>
     *{
   padding: 0;
   margin: 0;
@@ -129,157 +133,312 @@ left: 210px;
   text-align: center;
 }
 
-</style>
-<div class="wallpaper">
-  <img src="/logo-removebg-preview (1).png" width="200px" class="p-1">
-  
-  
+</style> -->
+    <div
+      class="wallpaper vh-100"
+      style="
+        background: url(https://wallpaperaccess.com/full/1771974.jpg) center
+          fixed;
+      "
+    >
+      <img src="./images/logo-main-blue.png" width="200px" class="p-1" />
 
-  <div class="welcome">
-      <h1 style="font-size:60px ;">Welcome to eStudiez</h1>
-      <p>A journey to excellence</p>
-
-     
-
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <button type="button" class="btn  sign" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Sign up</button>
-
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" >
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">CREATE AN ACCOUNT </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div
+        class="container d-flex flex-column align-items-start justify-content-center"
+        style="height: 80vh"
+      >
+        <div class="welcome">
+          <h1 style="font-size: 60px">Welcome to eStudiez</h1>
+          <p>Begin your journey to excellence</p>
         </div>
-        <div class="modal-body" >
-          <form style="overflow-y: auto !important; max-height: 5 0vh !important;">
 
-
-            <div>
-                <label class="form-label">Firstname</label>               
-                <input type="text" class="form-control">
-
+        <div
+          class="modal fade"
+          id="exampleModalToggle"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel"
+          tabindex="-1"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">
+                  Category
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                Sign up as a parent, student or faculty.
+              </div>
+              <div class="modal-footer">
+                <button
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                  onclick="setCategory('Teacher')"
+                >
+                  Teacher
+                </button>
+                <button
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                  onclick="setCategory('Student')"
+                >
+                  Student
+                </button>
+                <button
+                  class="btn btn-primary"
+                  data-bs-target="#exampleModalToggle2"
+                  data-bs-toggle="modal"
+                  onclick="setCategory('Parent')"
+                >
+                  Parent
+                </button>
+              </div>
             </div>
-
-            <div >
-             <label class="form-label">Lastname</label>
-             <input type="text" class="form-control">
-         </div>
-
-         <div>
-           <label class="form-label">Username</label>
-           <input type="text" class="form-control">
-       </div>
-
-       <div >
-        <label class="form-label">Lastname</label>
-        <input type="text" class="form-control">
-    </div>
-
-    <div>
-      <label class="form-label">Username</label>
-      <input type="text" class="form-control">
-    </div>
-
-    
-    <div>
-      <label class="form-label">Username</label>
-      <input type="text" class="form-control">
-    </div>
-
-
-       
-       
-       
-       
-        </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- modal for log in  -->
-
-
-
-
-
-
-<button type="button" class="btn sign2" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">Log in</button>
-
-<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
-  <div class="modal-dialog" >
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel2"> LOGIN IN YOUR ACCOUNT </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body" >
-        <form style="overflow-y: auto !important; max-height: 5 0vh !important;">
-
-
-              
-            <div>
-              <label class="form-label">Username</label>
-              <input type="text" class="form-control">
           </div>
-     
-     
-          
-          <div>
-           <label class="form-label">Password</label>
-           <input type="password" class="form-control"><br>
-       </div>
-     
-       <input type="submit" class="sub">
-    
-      </form>
+        </div>
+        <div
+          class="modal fade"
+          id="exampleModalToggle2"
+          aria-hidden="true"
+          aria-labelledby="exampleModalToggleLabel2"
+          tabindex="1"
+        >
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5
+                  class="modal-title signupTitle"
+                  id="exampleModalToggleLabel2"
+                >
+                  Sign Up
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  id="signup"
+                  class="needs-validation"
+                  style="max-height: 50vh; overflow: auto"
+                  novalidate
+                >
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                  />
+                  <label for="user_id">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    placeholder="Enter your username"
+                    required
+                  />
+                  <label for="first_name">First Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="first_name"
+                    name="first_name"
+                    placeholder="Enter your first name"
+                    required
+                  />
+                  <label for="last_name">Last Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="last_name"
+                    name="last_name"
+                    placeholder="Enter your last name"
+                    required
+                  />
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                  />
+                  <label for="confirmPassword">Confirm Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirm password"
+                    required
+                  />
+                  <label for="eduClass">Select your class</label>
+                  <select
+                    class="form-control"
+                    id="eduClass"
+                    name="eduClass"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Please choose one
+                    </option>
+                    <option value="SS1">SS1</option>
+                    <option value="SS2">SS2</option>
+                    <option value="SS3">SS3</option>
+                  </select>
+                  <label for="age">Age</label><br />
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    placeholder="Age"
+                    required
+                  /><br />
+                  <label for="gender">Gender</label><br />
+                  <label for="gender">Male</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    class="ms-3"
+                    required
+                  /><br />
+                  <label for="gender">Female</label>
+                  <input
+                    type="radio"
+                    name="gender"
+                    class="ms-1 mb-3"
+                    required
+                  /><br />
+                  <label for="childId" id="childId">Child/Ward's Username</label
+                  ><br />
+                  <input
+                    type="text"
+                    name="childId"
+                    id="childId"
+                    class="childId"
+                    placeholder="Your child or ward's username"
+                    required
+                  /><br />
+                  <button
+                    class="btn btn-primary my-3"
+                    id="submit"
+                    type="submit"
+                  >
+                    Sign up
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <!-- Signup button  -->
+          <a
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            href="#exampleModalToggle"
+            role="button"
+            >Sign up</a
+          >
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Submit</button>
+          <!-- Login button  -->
+          <button
+            type="button"
+            class="btn btn-primary m-2"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal5"
+            data-bs-whatever="@mdo"
+          >
+            Sign in
+          </button>
+        </div>
+        <!-- Login Modal -->
+        <div
+          class="modal fade"
+          id="exampleModal5"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel5"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel5">
+                  LOGIN TO YOUR ACCOUNT
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form
+                  style="
+                    overflow-y: auto !important;
+                    max-height: 5 0vh !important;
+                  "
+                >
+                  <div>
+                    <label class="form-label">Username</label>
+                    <input type="text" class="form-control" />
+                  </div>
+
+                  <div>
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" /><br />
+                  </div>
+
+                  <input
+                    type="submit"
+                    class="btn btn-primary"
+                    value="Sign in"
+                  />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-</div>
+    <!-- Firebase cdn, config and initialisation -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-auth.js"></script>
+    <script>
+      //Initialize Firebase
+      var config = {
+        apiKey: 'AIzaSyCH-0jemPytvwPxatjc1-ZekLMQSi3QuF4',
+        authDomain: 'estudiez-f87eb.firebaseapp.com',
+        projectId: 'estudiez-f87eb',
+        storageBucket: 'estudiez-f87eb.appspot.com',
+        messagingSenderId: '237693345273',
+        appId: '1:237693345273:web:e37ab9ce2f5330d79d7128',
+      }
+      firebase.initializeApp(config)
+      const db = firebase.firestore()
+      const auth = firebase.auth()
+    </script>
 
-
-
-  
-    
-</body>
+    <script src="js/users.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>
-
-
-
