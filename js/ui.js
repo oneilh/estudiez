@@ -65,14 +65,14 @@ let teacherScores = document.querySelector('.teachUpdate');
 let Admin = document.querySelector('.admin-update');
 let teachBtn = document.querySelector('.teachBtn');
 teacherScores.addEventListener('click', () => {
-    teacherScores.style.display = 'block';
-    Admin.style.display = 'none';
+    Admin.style.display = 'block';
+    teachDis.style.display = 'none';
     // result.style.display = 'none';
     // resource.style.display = 'none';
 });
 closeBtn2.addEventListener('click', () => {
     Admin.style.display = 'block';
-    teacherScores.style.display = 'none'
+    teachDis.style.display = 'none'
     // resource.style.display = 'none';
 });
 

@@ -341,6 +341,53 @@ img{
 /* ============================Parent============================ */
 
 
+/* =========student display grid. and set teacher
+grid to none applies to vice versa============*/
+.stud{
+    display: none;
+}
+/* ===========parent display set to none to display student view */
+.edit-categories{
+    display: grid;
+}
+
+
+
+
+/* ==============teacher============= */
+.admin-update{
+    display: none;
+}
+.admin-update table, admin-update th, admin-update td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+.admin-update td{
+    color: var(--bg3);
+    padding: 1.2rem;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+.admin-update th{
+    background-color: rgba(0, 0, 0, 0.664);
+    color: var(--bg3);
+    padding: 1.2rem;
+    border-left: 1px solid black;
+}
+.admin-update input{
+    width: 30%;
+}
+.admin-update [type = submit]{
+    background-color: black;
+    color: white;
+    margin-top: 2rem;
+    height: 3rem;
+    width: 8rem;
+    font-weight: bold;
+}
+
 
 
 
@@ -447,45 +494,3 @@ img{
 
 }
 
-
-
-/* student display none */
-.stud{
-    display: none;
-}
-.edit-categories{
-    display: grid;
-}
-/* ==============teacher============= */
-.admin-update{
-    display: none;
-}
-.admin-update table, admin-update th, admin-update td{
-    border: 2px solid black;
-    border-collapse: collapse;
-    width: 100%;
-}
-.admin-update td{
-    color: var(--bg3);
-    padding: 1.2rem;
-    border-left: 2px solid black;
-    border-bottom: 2px solid black;
-    font-weight: bold;
-}
-.admin-update th{
-    background-color: rgba(0, 0, 0, 0.664);
-    color: var(--bg3);
-    padding: 1.2rem;
-    border-left: 1px solid black;
-}
-.admin-update input{
-    width: 30%;
-}
-.admin-update [type = submit]{
-    background-color: black;
-    color: white;
-    margin-top: 2rem;
-    height: 3rem;
-    width: 8rem;
-    font-weight: bold;
-}
