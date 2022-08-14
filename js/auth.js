@@ -36,6 +36,8 @@ signupForm.addEventListener('submit', e => {
       // Recieve sign in response
       let user = cred.user
       console.log(user)
+      //Confirmation mail
+      user.sendEmailVerification()
 
       // Save user data to database
       // users.addUser(userDetails)
@@ -44,11 +46,11 @@ signupForm.addEventListener('submit', e => {
 
       users.getUser(user.email)
       if (user) {
-        window.location.replace('./index.html')
+        window.location.replace('./dashboard.html')
       }
     })
     .catch(error => {
-      console.log('3', error.message)
+      console.log(error.message)
     })
 })
 
@@ -64,7 +66,7 @@ loginForm.addEventListener('submit', e => {
     .signInWithEmailAndPassword(email, password)
     .then(cred => {
       if (cred.user) {
-        window.location.replace('./index.html')
+        window.location.replace('./dashboard.html')
       }
     })
     .catch(err => {

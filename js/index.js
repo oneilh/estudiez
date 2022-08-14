@@ -31,7 +31,7 @@ const setCategory = cat => {
 //         });
 
 // sign user out of auth session
-// const logoutbtn = document.getElementById('#logout')
-// logoutbtn.addEventListener('click', () => {
-//   auth.signOut()
-// })
+const logout = () => {
+  auth.signOut()
+  window.location.replace('./landing.html')
+}

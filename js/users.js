@@ -12,7 +12,7 @@ class Users {
     })
   }
 
-  getUser(user) {
+  getUser() {
     this.usersRef.where('email', '==', user).onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
         console.log(
