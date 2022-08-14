@@ -12,6 +12,20 @@ class Users {
     })
   }
 
+  getUser(user) {
+    this.usersRef.where('email', '==', user).onSnapshot(snapshot => {
+      snapshot.docChanges().forEach(change => {
+        console.log(
+          change.doc.data().first_name +
+            ' ' +
+            change.doc.data().last_name +
+            ' ' +
+            change.doc.id
+        )
+      })
+    })
+  }
+
   async addUser(userDetails) {
     const {
       first_name,
@@ -35,17 +49,18 @@ class Users {
       gender,
       category: this.category,
       reg_date,
-      childId,
     }
     console.log(userData)
     const response = await this.usersRef.add(userData)
-    if (category.toLowerCase() == 'student') {
+    if (this.category.toLowerCase() == 'student') {
       const studentData = {
         class: eduClass,
         reg_date,
         username,
       }
-      this.studentsRef.add(studentData)
+      this.studentsRef
+        .add(studentData)
+        .then(() => console.log(`${username} added`))
     }
     return this
   }

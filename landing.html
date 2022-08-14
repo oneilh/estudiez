@@ -26,6 +26,9 @@
       src="https://kit.fontawesome.com/a2c8a30440.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/logo-sm1.png" type="image/x-icon" />
     <!-- ========css======== -->
 
     <!-- google fonts montserrat -->
@@ -180,7 +183,7 @@ left: 210px;
                   class="btn btn-primary"
                   data-bs-target="#exampleModalToggle2"
                   data-bs-toggle="modal"
-                  onclick="setCategory('Teacher')"
+                  onclick="setCategory('Faculty')"
                 >
                   Teacher
                 </button>
@@ -288,28 +291,33 @@ left: 210px;
                     placeholder="Confirm password"
                     required
                   />
-                  <label for="eduClass">Select your class</label>
-                  <select
-                    class="form-control"
-                    id="eduClass"
-                    name="eduClass"
-                    required
-                  >
-                    <option value="" disabled selected>
-                      Please choose one
-                    </option>
-                    <option value="SS1">SS1</option>
-                    <option value="SS2">SS2</option>
-                    <option value="SS3">SS3</option>
-                  </select>
-                  <label for="age">Age</label><br />
-                  <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    placeholder="Age"
-                    required
-                  /><br />
+                  <div class="parentHide">
+                    <label for="eduClass">Select your class</label>
+                    <select
+                      class="form-control"
+                      id="eduClass"
+                      name="eduClass"
+                      required
+                    >
+                      <option value="" disabled selected>
+                        Please choose one
+                      </option>
+                      <option value="SS1">SS1</option>
+                      <option value="SS2">SS2</option>
+                      <option value="SS3">SS3</option>
+                    </select>
+                  </div>
+                  <div class="parentHide facHide">
+                    <label for="age">Age</label><br />
+                    <input
+                      type="number"
+                      id="age"
+                      name="age"
+                      class="age"
+                      placeholder="Age"
+                    />
+                  </div>
+                  <br />
                   <label for="gender">Gender</label><br />
                   <label for="gender">Male</label>
                   <input
@@ -325,16 +333,19 @@ left: 210px;
                     class="ms-1 mb-3"
                     required
                   /><br />
-                  <label for="childId" id="childId">Child/Ward's Username</label
-                  ><br />
-                  <input
-                    type="text"
-                    name="childId"
-                    id="childId"
-                    class="childId"
-                    placeholder="Your child or ward's username"
-                    required
-                  /><br />
+                  <div class="facHide studHide">
+                    <label for="childId" id="childId"
+                      >Child/Ward's Username</label
+                    ><br />
+                    <input
+                      type="text"
+                      name="childId"
+                      id="childId"
+                      class="childId"
+                      placeholder="Your child or ward's username"
+                    />
+                  </div>
+                  <br />
                   <button
                     class="btn btn-primary my-3"
                     id="submit"
@@ -376,7 +387,7 @@ left: 210px;
           aria-labelledby="exampleModalLabel5"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
               <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel5">
@@ -391,19 +402,40 @@ left: 210px;
               </div>
               <div class="modal-body">
                 <form
+                  id="loginForm"
+                  action="./index.html"
                   style="
                     overflow-y: auto !important;
                     max-height: 5 0vh !important;
                   "
                 >
                   <div>
-                    <label class="form-label">Username</label>
-                    <input type="text" class="form-control" />
+                    <label class="loginEmail" id="emailLabel" for="loginEmail"
+                      >Username</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="loginEmail"
+                      name="loginEmail"
+                      placeholder="Your Email"
+                    />
                   </div>
 
                   <div>
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-control" /><br />
+                    <label
+                      class="form-label"
+                      for="loginPassword"
+                      id="loginPassword"
+                      >Password</label
+                    >
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="loginPassword"
+                      name="loginPassword"
+                      placeholder="Password"
+                    /><br />
                   </div>
 
                   <input
@@ -439,6 +471,7 @@ left: 210px;
     </script>
 
     <script src="js/users.js"></script>
+    <script src="js/auth.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
