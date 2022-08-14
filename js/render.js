@@ -8,8 +8,7 @@ auth.onAuthStateChanged(user => {
       snapshot.docChanges().forEach(change => {
         const id = change.doc.id
         console.log(change.doc.data())
-        const user = db.collection('users').doc(id)
-        renderProfile(user)
+        renderProfile(change.doc.data())
       })
     })
   }
@@ -39,9 +38,11 @@ const renderProfile = ({
   email,
   category,
 }) => {
-  const profile = document.querySelector('.categories')
+  const profile = document.querySelector(
+    'body > div > div.edit-categories.categories > div.profile.card'
+  )
+  console.log(first_name + ' ' + last_name + ' ' + gender)
   const html = `
-        <div class="profile card" tabindex="1">
             <div class="profile-image"><i class="fa-solid fa-user"></i></div>
             <h3 class="title">
                 <span id="first-name">${first_name}</span>
@@ -56,8 +57,7 @@ const renderProfile = ({
                 <br>
                 <span id="category">${category}</span>
             </p>
-        </div>
         `
   profile.innerHTML = html
-  console.log('rendered')
+  console.log(profile)
 }
