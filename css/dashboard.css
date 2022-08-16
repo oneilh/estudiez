@@ -1,13 +1,11 @@
 body{
     background-color: var(--bg1);
-    /* opacity: 40%; */
     padding: 0;
     margin: 0;
     border: 0;
     outline: none;
     box-sizing: border-box; 
     user-select: none;
-    /* line-height: 1.7; */
     text-decoration: none;
     list-style-type: none;
     font-family: 'Montserrat', sans-serif;
@@ -19,9 +17,6 @@ body{
 }
 
 *{
-    /* --container-bg: transparent; */
-    /* --bg1: #b6b6ff;
-    --bg2: rgba(0, 0, 0, 0.5); */
     --bg1: #fce8e8;
     --bg2: rgb(154, 200, 240);
     --bg3: white;
@@ -451,8 +446,8 @@ grid to none applies to vice versa============*/
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:     "item1"
-                             "item2"
                              "item3"
+                             "item2"
                              "item4"
                              "item5"
                              "item6";
@@ -463,8 +458,8 @@ grid to none applies to vice versa============*/
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:     "item1"
-                             "item2"
                              "item3"
+                             "item2"
                              "item4"
                              "item5"
                              "item6";
@@ -477,9 +472,17 @@ grid to none applies to vice versa============*/
     display: none;
 }
 
+
+/* ==========body media query=========== */
 body{
     width: 100%;
 }
+
+/* ====display=== */
+.display-box1{
+    display: none;
+}
+
 
 .general-home{
     display: flex;
@@ -754,56 +757,6 @@ td::before{
 
 /* ==========================================resources teacher================================= */
 /* ==ebook== */
-.teach-resource th{
-    display: none;
-}
-.teach-resource td{
-    display: block;
-}
-.teach-resource td:first-child{
-    background-color: #333;
-    color: var(--bg3);
-    text-align: center;
-}
-.teach-resource td{
-    text-align: right;
-}
-.teach-resource td::before{
-    float: left;
-    margin-right: 3rem;
-    font-weight: bold;
-}   
-
-
-/* ==video== */
-.teach-vid-upd th{
-    display: none;
-}
-.teach-vid-upd td{
-    display: block;
-}
-.teach-vid-upd td:first-child{
-    background-color: #333;
-    color: var(--bg3);
-    text-align: center;
-}
-.teach-vid-upd td{
-    text-align: right;
-}
-.teach-vid-upd td::before{
-    float: right;
-    margin-right: 3rem;
-    font-weight: bold;
-}  
-.teach-vid-upd{
-    margin: 2rem -1rem;
-}
-
-
-
-
-/* ======================resources student================== */
-/* ==ebook== */
 .resources-info th{
     display: none;
 }
@@ -822,31 +775,65 @@ td::before{
     float: left;
     margin-right: 3rem;
     font-weight: bold;
-}   
+} 
+  
 
 
 /* ==video== */
-.video th{
+
+
+
+/* ======================resources student================== */
+/* ==ebook== */
+.resources-info th{
     display: none;
 }
-.video td{
+.resources-info td{
     display: block;
 }
-.video td:first-child{
+.resources-info td:first-child{
     background-color: #333;
     color: var(--bg3);
     text-align: center;
 }
-.video td{
-    text-align: right;
+.resources-info td{
+    text-align: center;
 }
-.video td::before{
+.resources-info td::before{
+    float: left;
+    margin-right: 3rem;
+    font-weight: bold;
+} 
+.resources-info table{
+    border: none;
+}  
+
+
+/* ==video== */
+.videos th{
+    display: none;
+}
+.videos td{
+    display: block;
+}
+.videos td:first-child{
+    background-color: #333;
+    color: var(--bg3);
+    text-align: center;
+}
+.videos td{
+    text-align: center;
+}
+.videoss td::before{
     float: right;
     margin-right: 3rem;
     font-weight: bold;
 }  
-.video{
+.videos{
     margin: 2rem -1rem;
+}
+.videos table{
+    border: none;
 }
 
 

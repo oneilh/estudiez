@@ -1,5 +1,12 @@
+  //=============media mobile============
+  let display_box = document.querySelector('.display-box');
+
 // ============student===============
-let additional = document.querySelector('.additional');
+  let additional = document.querySelector('.additional');
+
+
+
+
 
 // =================Result===============
 let result = document.querySelector('.result-info');
@@ -148,3 +155,6 @@ function myFunction() {
       x.style.display = "block";
     }
   } 
+
+
+
