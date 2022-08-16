@@ -473,6 +473,9 @@ grid to none applies to vice versa============*/
 .stud{
     display: none;
 }
+.teach{
+    display: grid;
+}
 
 body{
     width: 100%;
