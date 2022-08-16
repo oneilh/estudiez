@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/a2c8a30440.js" crossorigin="anonymous"></script>
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/logo-sm1.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/logo-sm1-blue.png" type="image/x-icon" />
 
     <!-- ========css======== -->
     <link rel="stylesheet" href="./css/dashboard.css">
@@ -41,11 +41,11 @@
         <Nav>         
                 <!-- Top Navigation Menu -->
                 <div class="topnav">
-                    <a href="./index.html" class="active">Logo</a>
+                    <a href="./index.html" class="active"><img src="./images/logo-sm1.png" alt="" style="width:30px;"></a>
                     <!-- Navigation links (hidden by default) -->
                     <div id="myLinks">
-                    <a href="/Contact.html">Contact</a>
-                    <a href="/feedback.html">Feedback</a>
+                    <a href="./Contact.html">Contact</a>
+                    <a href="./feedback.html">Feedback</a>
                     </div>
                     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
                     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -58,6 +58,7 @@
 
         <!-- ======menu===== -->
         <div class="menu">
+          <div class="contact icon" style="top: -10px;"><a href="./index.html" class="active"><img class="p-2" src="./images/logo-sm1-blue.png" alt=""></a></div>
           <div class="contact icon"><a href="./feedback.html"><i class="fa-solid fa-comment-dots"></i></a></div>
             <div class="contact icon"><a href="./Contact.html"><i class="fa-solid fa-envelope"></i></a></div>
             <div class="dashBoard icon"><i class="fa-solid fa-house"></i></div>
@@ -729,7 +730,7 @@
     </script>
 
     <script src="./js/users.js"></script>
-    <!-- <script src="./js/auth.js"></script> -->
     <script src="./js/index.js"></script>
+    <script src="./js/render.js"></script>
 </body>
 </html>
