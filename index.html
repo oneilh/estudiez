@@ -140,21 +140,44 @@ left: 210px;
     <div
       class="wallpaper vh-100"
       style="
-        background: url(https://wallpaperaccess.com/full/1771974.jpg) center
-          fixed;
+        background: url(https://wallpaperaccess.com/full/1771974.jpg) center fixed
+          ;
       "
     >
       <img src="./images/logo-main-blue.png" width="200px" class="p-1" />
 
       <div
-        class="container d-flex flex-column align-items-start justify-content-center"
+        class="container d-flex flex-column align-items-md-start align-items-sm-center align-items-center justify-content-center"
         style="height: 80vh"
       >
-        <div class="welcome">
+        <div class="welcome text-center text-md-start">
           <h1 style="font-size: 60px">Welcome to eStudiez</h1>
           <p>Begin your journey to excellence</p>
         </div>
 
+        
+        <div class="list-unstyled d-flex">
+          <!-- Signup button  -->
+          <li class="p-2"><a
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            href="#exampleModalToggle"
+            role="button"
+            >Sign up</a
+          ></li>
+
+          <!-- Login button  -->
+          <li class="p-2"><button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal5"
+            data-bs-whatever="@mdo"
+          >
+            Sign in
+          </button></li>
+        </div>
+        <!-- Sign up form -->
         <div
           class="modal fade"
           id="exampleModalToggle"
@@ -357,27 +380,6 @@ left: 210px;
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <!-- Signup button  -->
-          <a
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            href="#exampleModalToggle"
-            role="button"
-            >Sign up</a
-          >
-
-          <!-- Login button  -->
-          <button
-            type="button"
-            class="btn btn-primary m-2"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal5"
-            data-bs-whatever="@mdo"
-          >
-            Sign in
-          </button>
         </div>
         <!-- Login Modal -->
         <div
