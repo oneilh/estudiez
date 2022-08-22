@@ -101,13 +101,8 @@ img{
 .stud{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-<<<<<<< HEAD
-    grid-gap: 0.8rem;
-    padding: 0.5rem;
-=======
     grid-gap: 1rem;
     margin: 1rem;
->>>>>>> 1344037ec89974a2ea565848a136e57900153cd6
     grid-template-areas:    " item1 item2 item3 item3"
                             " item1 item4 item3 item3"
                             " item6 item5 item3 item3"
@@ -116,13 +111,8 @@ img{
 .teach{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-<<<<<<< HEAD
-    grid-gap: 1.2rem;
-    padding: 0.8rem;
-=======
     grid-gap: 1rem;
     margin: 1rem;
->>>>>>> 1344037ec89974a2ea565848a136e57900153cd6
     grid-template-areas:    " item1 item2 item3 item3"
                             " item1 item4 item3 item3"
                             " item6 item5 item3 item3"

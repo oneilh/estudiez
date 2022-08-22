@@ -4,9 +4,9 @@ const users = new Users()
 checkAuth()
 
 async function checkAuth() {
-  console.log('checking auth state')
+  // console.log('checking auth state')
   const user = await auth.currentUser
-  console.log(user)
+  // console.log(user)
   // if (!user) {
   //   logout()
   // }
@@ -14,9 +14,9 @@ async function checkAuth() {
 
 // subscription to auth changes
 auth.onAuthStateChanged(user => {
-  console.log('subscribing to auth changes')
+  // console.log('subscribing to auth changes')
   if (user) {
-    console.log(user)
+    // console.log(user)
     const email = user.email
     users.usersRef.where('email', '==', email).onSnapshot(snapshot => {
       snapshot.docChanges().forEach(change => {
@@ -58,7 +58,9 @@ const renderProfile = ({
   const stud = document.querySelector('.stud')
   const teach = document.querySelector('.teach')
   if (category == 'Faculty') {
-    profile = document.querySelector("body > div > div.categories.stud > div.profile.card")
+    profile = document.querySelector(
+      'body > div > div.categories.stud > div.profile.card'
+    )
     html = `
             <div class="profile-image"><i class="fa-solid fa-user"></i></div>
             <h3 class="title">
@@ -79,8 +81,8 @@ const renderProfile = ({
     profile.innerHTML = html
     teach.style.display = 'grid'
     teach.style.display = 'none'
-    console.log(profile)
-  } else if (category == 'Student') {
+    // console.log(profile)
+  } else if (category == 'Student' || category == 'Parent') {
     profile = document.querySelector(
       'body > div > div.categories.stud > div.profile.card'
     )
@@ -93,7 +95,7 @@ const renderProfile = ({
             <hr>
             <p>
                 <span id="gender">${gender}</span> -
-                <span id="age">${age}</span> YRS OLD
+                <span id="age">${age && age}</span> YRS OLD
                 <br>
                 <span id="gmail">${email}</span>
                 <br>
@@ -101,6 +103,6 @@ const renderProfile = ({
             </p>
         `
     profile.innerHTML = html
-    console.log(profile)
+    // console.log(profile)
   }
 }

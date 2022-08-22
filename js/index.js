@@ -1,6 +1,6 @@
 const setCategory = cat => {
   users.category = cat
-  console.log('category: ', cat)
+  // console.log('category: ', cat)
   document.querySelector('.signupTitle').textContent = `${cat} Sign Up`
   if (cat == 'Student') {
     document
@@ -19,8 +19,10 @@ const setCategory = cat => {
 
 // sign user out of auth session
 const logout = () => {
-  auth.signOut()
-  window.location.replace('./index.html')
+  auth.signOut().then(() => {
+    location.replace('./index.html')
+    console.log('here')
+  })
 }
 
 // Form Validation =================================================================
